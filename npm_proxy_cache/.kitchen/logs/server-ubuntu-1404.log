@@ -1,0 +1,30 @@
+I, [2015-11-06T10:11:37.132280 #4912]  INFO -- server-ubuntu-1404: -----> Converging <server-ubuntu-1404>...
+I, [2015-11-06T10:11:37.133781 #4912]  INFO -- server-ubuntu-1404: Preparing files for transfer
+I, [2015-11-06T10:11:37.133781 #4912]  INFO -- server-ubuntu-1404: Preparing dna.json
+I, [2015-11-06T10:11:37.134781 #4912]  INFO -- server-ubuntu-1404: Preparing current project directory as a cookbook
+I, [2015-11-06T10:11:37.149784 #4912]  INFO -- server-ubuntu-1404: Removing non-cookbook files before transfer
+I, [2015-11-06T10:11:37.159286 #4912]  INFO -- server-ubuntu-1404: Preparing validation.pem
+I, [2015-11-06T10:11:37.160286 #4912]  INFO -- server-ubuntu-1404: Preparing client.rb
+I, [2015-11-06T10:11:39.458245 #4912]  INFO -- server-ubuntu-1404: -----> Chef Omnibus installation detected (install only if missing)
+I, [2015-11-06T10:11:39.622278 #4912]  INFO -- server-ubuntu-1404: Transferring files to <server-ubuntu-1404>
+I, [2015-11-06T10:11:43.999153 #4912]  INFO -- server-ubuntu-1404: Starting Chef Client, version 12.5.1
+I, [2015-11-06T10:11:46.571168 #4912]  INFO -- server-ubuntu-1404: resolving cookbooks for run list: ["npm_proxy_cache::server"]
+I, [2015-11-06T10:11:46.643182 #4912]  INFO -- server-ubuntu-1404: Synchronizing Cookbooks:
+I, [2015-11-06T10:11:46.644682 #4912]  INFO -- server-ubuntu-1404:   - npm_proxy_cache (0.1.0)
+I, [2015-11-06T10:11:46.645683 #4912]  INFO -- server-ubuntu-1404: Compiling Cookbooks...
+I, [2015-11-06T10:11:46.657185 #4912]  INFO -- server-ubuntu-1404: Converging 6 resources
+I, [2015-11-06T10:11:46.658185 #4912]  INFO -- server-ubuntu-1404: Recipe: npm_proxy_cache::server
+I, [2015-11-06T10:11:46.849223 #4912]  INFO -- server-ubuntu-1404:   * apt_package[npm, nodejs-legacy] action install (up to date)
+I, [2015-11-06T10:11:47.350324 #4912]  INFO -- server-ubuntu-1404:   * execute[npm_config] action run
+I, [2015-11-06T10:11:47.350324 #4912]  INFO -- server-ubuntu-1404:     - execute npm config set prefix /usr/.npm-packages
+I, [2015-11-06T10:12:00.089371 #4912]  INFO -- server-ubuntu-1404: 
+I, [2015-11-06T10:12:00.089871 #4912]  INFO -- server-ubuntu-1404:     - execute npm install -g forever npm-proxy-cache
+I, [2015-11-06T10:12:00.089871 #4912]  INFO -- server-ubuntu-1404:   * execute[npm_stop_proxy] action run (skipped due to not_if)
+I, [2015-11-06T10:12:00.721497 #4912]  INFO -- server-ubuntu-1404: 
+I, [2015-11-06T10:12:00.721497 #4912]  INFO -- server-ubuntu-1404:     - execute /usr/.npm-packages/bin/forever start  /usr/.npm-packages/bin/npm-proxy-cache -e -h 127.0.0.1 -p 8080
+I, [2015-11-06T10:12:00.792511 #4912]  INFO -- server-ubuntu-1404:  (up to date)
+I, [2015-11-06T10:12:00.838521 #4912]  INFO -- server-ubuntu-1404: 
+I, [2015-11-06T10:12:00.841521 #4912]  INFO -- server-ubuntu-1404: Running handlers:
+I, [2015-11-06T10:12:00.842521 #4912]  INFO -- server-ubuntu-1404: Running handlers complete
+I, [2015-11-06T10:12:00.847522 #4912]  INFO -- server-ubuntu-1404: Chef Client finished, 3/6 resources updated in 16 seconds
+I, [2015-11-06T10:12:02.076768 #4912]  INFO -- server-ubuntu-1404: Finished converging <server-ubuntu-1404> (0m24.94s).

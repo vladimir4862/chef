@@ -1,0 +1,6 @@
+---
+hostname: 127.0.0.1
+port: '2201'
+username: vagrant
+ssh_key: c:/chef/chef-repo/cookbooks/npm_proxy_cache/.kitchen/kitchen-vagrant/kitchen-npm_proxy_cache-server-ubuntu-1404/.vagrant/machines/default/virtualbox/private_key
+last_action: converge
